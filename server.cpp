@@ -23,7 +23,7 @@ void Interaction(SOCKET clientSocket, vector<SOCKET>& clients){
             break;
         }
         string message(buffer, bystesRecvd);
-        cout<<"Message received: "<<message<<"\n";
+        cout<<"Message received => "<<message<<"\n";
         for(auto client : clients){
             if(client != clientSocket)
             send(client, message.c_str(), message.length(), 0);
