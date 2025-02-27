@@ -38,6 +38,8 @@ void receiveMessage(SOCKET s){
         if(rcvlngth <= 0){
             cout<<"Server disconnected\n";
             break;
+        }else{
+            cout<<string(buffer, rcvlngth)<<"\n";
         }
     }
     closesocket(s);
